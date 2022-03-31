@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"./public/search.xml"};
   </script>
 
-  <meta name="description" content="开始第Ⅰ部分第2章 变量和基本类型基本内置类型算术类型——整型（包括字符和布尔类型在内）和浮点型  带符号（signed）类型和无符号（unsigned）类型    unsigned类型仅能表示大于等于0的值    一般整型分为两种，字符型被分为三种：char、signed char和unsigned      char，其中char即可指代signed也可以是unsigned，取决于编译器">
+  <meta name="description" content="写在前面的话：以下为作者阅读《c++primer（第五版）》所做的笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="我的C++学习笔记">
 <meta property="og:url" content="http://example.com/2022/03/30/%E6%88%91%E7%9A%84C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="派大标的菠萝屋">
-<meta property="og:description" content="开始第Ⅰ部分第2章 变量和基本类型基本内置类型算术类型——整型（包括字符和布尔类型在内）和浮点型  带符号（signed）类型和无符号（unsigned）类型    unsigned类型仅能表示大于等于0的值    一般整型分为两种，字符型被分为三种：char、signed char和unsigned      char，其中char即可指代signed也可以是unsigned，取决于编译器">
+<meta property="og:description" content="写在前面的话：以下为作者阅读《c++primer（第五版）》所做的笔记">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-03-30T02:28:41.000Z">
-<meta property="article:modified_time" content="2022-03-30T03:15:00.112Z">
+<meta property="article:modified_time" content="2022-03-31T07:10:31.978Z">
 <meta property="article:author" content="David">
 <meta property="article:tag" content="c++">
 <meta name="twitter:card" content="summary">
@@ -213,10 +213,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-03-30 10:28:41 / 修改时间：11:15:00" itemprop="dateCreated datePublished" datetime="2022-03-30T10:28:41+08:00">2022-03-30</time>
+              <time title="创建时间：2022-03-30 10:28:41" itemprop="dateCreated datePublished" datetime="2022-03-30T10:28:41+08:00">2022-03-30</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-03-31 15:10:31" itemprop="dateModified" datetime="2022-03-31T15:10:31+08:00">2022-03-31</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -238,20 +244,17 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h1><h1 id="第Ⅰ部分"><a href="#第Ⅰ部分" class="headerlink" title="第Ⅰ部分"></a>第Ⅰ部分</h1><h2 id="第2章-变量和基本类型"><a href="#第2章-变量和基本类型" class="headerlink" title="第2章 变量和基本类型"></a>第2章 变量和基本类型</h2><h3 id="基本内置类型"><a href="#基本内置类型" class="headerlink" title="基本内置类型"></a>基本内置类型</h3><h4 id="算术类型"><a href="#算术类型" class="headerlink" title="算术类型"></a>算术类型</h4><p>——整型（包括字符和布尔类型在内）和浮点型</p>
+        <p>写在前面的话：<br>以下为作者阅读《c++primer（第五版）》所做的笔记</p>
+<span id="more"></span>
+
+<h1 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h1><h1 id="第Ⅰ部分"><a href="#第Ⅰ部分" class="headerlink" title="第Ⅰ部分"></a>第Ⅰ部分</h1><h2 id="第2章-变量和基本类型"><a href="#第2章-变量和基本类型" class="headerlink" title="第2章 变量和基本类型"></a>第2章 变量和基本类型</h2><h3 id="基本内置类型"><a href="#基本内置类型" class="headerlink" title="基本内置类型"></a>基本内置类型</h3><h4 id="算术类型"><a href="#算术类型" class="headerlink" title="算术类型"></a>算术类型</h4><p>——整型（包括字符和布尔类型在内）和浮点型</p>
 <ul>
-<li>带符号（signed）类型和无符号（unsigned）类型</li>
-</ul>
-<ol>
-<li><ul>
+<li>带符号（signed）类型和无符号（unsigned）类型<ul>
 <li>unsigned类型仅能表示大于等于0的值</li>
-</ul>
-</li>
-<li><ul>
 <li>一般整型分为两种，字符型被分为三种：char、signed char和unsigned      char，其中char即可指代signed也可以是unsigned，取决于编译器</li>
 </ul>
 </li>
-</ol>
+</ul>
 <h4 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h4><ul>
 <li>非布尔类型的算术值赋给bool类型时，初始值为0则为false，否则为true</li>
 <li>bool值赋给非布尔类型时，初始值为false则为0，否则为1</li>
@@ -439,6 +442,54 @@
 <p>面对一条比较复杂的指针或引用的声明语句时，从右向左阅读有助于弄清楚他的真实含义</p>
 </li>
 </ul>
+<h3 id="const限定符"><a href="#const限定符" class="headerlink" title="const限定符"></a>const限定符</h3><p>关键字const对变量的类型加以限定，使其值不再改变</p>
+<p>因为const对象一旦创建后其值就不能再改变，所以const对象必须初始化</p>
+<p>默认状态下，const对象仅在文件内有效，如果想在多个文件之间共享const对象，必须在变量的定义之前添加extern关键字</p>
+<h4 id="const的引用"><a href="#const的引用" class="headerlink" title="const的引用"></a>const的引用</h4><p>对常量的引用，不能被用作修改它所绑定的对象</p>
+<p>const int ci&#x3D;1024；</p>
+<p>const int &amp;r1&#x3D;ci；</p>
+<ul>
+<li><p>初始化和对const的引用</p>
+<p>引用的类型必须与其所引用对象的类型一致，但是有两个例外</p>
+<p>第一种，在初始化常量引用时允许用任意表达式作为初始值，只要该表达式的结果能转换成引用的类型即可。尤其，允许为一个常量引用绑定非常量的对象、字面值，甚至是个一般表达式</p>
+<p>int i&#x3D;42；</p>
+<p>const int &amp;r1&#x3D;i；</p>
+<p>const int &amp;r2&#x3D;42；</p>
+<p>const int &amp;r3&#x3D;r1*2；</p>
+<p>下面是一个复杂的情况：</p>
+<p>double dval&#x3D;3.14；</p>
+<p>int &amp;ri&#x3D;dval；错误</p>
+<p>const int &amp;ri&#x3D;dval；正确</p>
+<p>实际上编译器把上述代码变成了</p>
+<p>double dval&#x3D;3.14；</p>
+<p>const int temp&#x3D;dval；</p>
+<p>const int &amp;ri&#x3D;temp；</p>
+<p>ri绑定了一个临时量对象，即当编译器需要一个空间来暂存表达式的求值结果临时创建的一个未命名的对象</p>
+</li>
+<li><p>对const的引用可能引用一个并非const的对象</p>
+<p>常量引用仅对引用可参与的操作做出了限定，对于引用的对象本身是不是一个常量未作限定</p>
+<p>对象也可能是个非常量，所以允许通过其他途径改变他的值</p>
+</li>
+</ul>
+<h4 id="指针和const"><a href="#指针和const" class="headerlink" title="指针和const"></a>指针和const</h4><p>指向常量的指针，不能用于改变其所指对象的值，但没有规定那个对象的值不能通过其他途径改变</p>
+<p>const double pi&#x3D;3.14；pi是个常量，它的值不能改变</p>
+<p>double *ptr&#x3D;&amp;pi；错误，ptr是一个普通指针</p>
+<p>const double *cptr&#x3D;&amp;pi；正确，cptr可以指向一个双精度常量</p>
+<p><em>cptr&#x3D;42；错误，不能给</em>cptr赋值</p>
+<p>指针的类型必须与其所指对象的类型一致，但是有两个例外。第一种是允许令一个指向常量的指针指向一个非常量对象</p>
+<p>double dval&#x3D;3.14；</p>
+<p>const double *cptr&#x3D;&amp;dval；</p>
+<p>所谓指向常量的指针或引用，不过是“自以为是”罢了，他们觉得自己指向了常量，所以自觉地不去改变所指对象的值</p>
+<ul>
+<li><p>const指针</p>
+<p>常量指针必须初始化，而且一旦初始化完成，则它的值（也就是存放在指针中的那个地址）就不能再改变了</p>
+<p>int errNumb&#x3D;0；</p>
+<p>int *const curErr&#x3D;&amp;errNumb；curErr将一直指向errNumb</p>
+<p>const double pi&#x3D;3.14159；</p>
+<p>const double *const pip&#x3D;&amp;pi；pip是一个指向常量对象的常量指针</p>
+</li>
+</ul>
+<h4 id="顶层const"><a href="#顶层const" class="headerlink" title="顶层const"></a>顶层const</h4><p>顶层表示指针本身是个常量，底层表示指针所指的对象是一个常量</p>
 <link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
     </div>
 
@@ -536,7 +587,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B"><span class="nav-number">1.</span> <span class="nav-text">开始</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E2%85%A0%E9%83%A8%E5%88%86"><span class="nav-number">2.</span> <span class="nav-text">第Ⅰ部分</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC2%E7%AB%A0-%E5%8F%98%E9%87%8F%E5%92%8C%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B"><span class="nav-number">2.1.</span> <span class="nav-text">第2章 变量和基本类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%86%85%E7%BD%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">2.1.1.</span> <span class="nav-text">基本内置类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AE%97%E6%9C%AF%E7%B1%BB%E5%9E%8B"><span class="nav-number">2.1.1.1.</span> <span class="nav-text">算术类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="nav-number">2.1.1.2.</span> <span class="nav-text">类型转换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AD%97%E9%9D%A2%E5%80%BC%E5%B8%B8%E9%87%8F"><span class="nav-number">2.1.1.3.</span> <span class="nav-text">字面值常量</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%98%E9%87%8F"><span class="nav-number">2.1.2.</span> <span class="nav-text">变量</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E5%AE%9A%E4%B9%89"><span class="nav-number">2.1.2.1.</span> <span class="nav-text">变量定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E5%92%8C%E5%AE%9A%E4%B9%89%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-number">2.1.2.2.</span> <span class="nav-text">变量声明和定义的关系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A0%87%E8%AF%86%E7%AC%A6"><span class="nav-number">2.1.2.3.</span> <span class="nav-text">标识符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%90%8D%E5%AD%97%E7%9A%84%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="nav-number">2.1.2.4.</span> <span class="nav-text">名字的作用域</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B"><span class="nav-number">2.1.3.</span> <span class="nav-text">复合类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%95%E7%94%A8"><span class="nav-number">2.1.3.1.</span> <span class="nav-text">引用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8C%87%E9%92%88"><span class="nav-number">2.1.3.2.</span> <span class="nav-text">指针</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%90%86%E8%A7%A3%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%A3%B0%E6%98%8E"><span class="nav-number">2.1.3.3.</span> <span class="nav-text">理解复合类型的声明</span></a></li></ol></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B"><span class="nav-number">1.</span> <span class="nav-text">开始</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E2%85%A0%E9%83%A8%E5%88%86"><span class="nav-number">2.</span> <span class="nav-text">第Ⅰ部分</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC2%E7%AB%A0-%E5%8F%98%E9%87%8F%E5%92%8C%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B"><span class="nav-number">2.1.</span> <span class="nav-text">第2章 变量和基本类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%86%85%E7%BD%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">2.1.1.</span> <span class="nav-text">基本内置类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AE%97%E6%9C%AF%E7%B1%BB%E5%9E%8B"><span class="nav-number">2.1.1.1.</span> <span class="nav-text">算术类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="nav-number">2.1.1.2.</span> <span class="nav-text">类型转换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AD%97%E9%9D%A2%E5%80%BC%E5%B8%B8%E9%87%8F"><span class="nav-number">2.1.1.3.</span> <span class="nav-text">字面值常量</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%98%E9%87%8F"><span class="nav-number">2.1.2.</span> <span class="nav-text">变量</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E5%AE%9A%E4%B9%89"><span class="nav-number">2.1.2.1.</span> <span class="nav-text">变量定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E5%92%8C%E5%AE%9A%E4%B9%89%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-number">2.1.2.2.</span> <span class="nav-text">变量声明和定义的关系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A0%87%E8%AF%86%E7%AC%A6"><span class="nav-number">2.1.2.3.</span> <span class="nav-text">标识符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%90%8D%E5%AD%97%E7%9A%84%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="nav-number">2.1.2.4.</span> <span class="nav-text">名字的作用域</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B"><span class="nav-number">2.1.3.</span> <span class="nav-text">复合类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%95%E7%94%A8"><span class="nav-number">2.1.3.1.</span> <span class="nav-text">引用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8C%87%E9%92%88"><span class="nav-number">2.1.3.2.</span> <span class="nav-text">指针</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%90%86%E8%A7%A3%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%A3%B0%E6%98%8E"><span class="nav-number">2.1.3.3.</span> <span class="nav-text">理解复合类型的声明</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#const%E9%99%90%E5%AE%9A%E7%AC%A6"><span class="nav-number">2.1.4.</span> <span class="nav-text">const限定符</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#const%E7%9A%84%E5%BC%95%E7%94%A8"><span class="nav-number">2.1.4.1.</span> <span class="nav-text">const的引用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8C%87%E9%92%88%E5%92%8Cconst"><span class="nav-number">2.1.4.2.</span> <span class="nav-text">指针和const</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A1%B6%E5%B1%82const"><span class="nav-number">2.1.4.3.</span> <span class="nav-text">顶层const</span></a></li></ol></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
