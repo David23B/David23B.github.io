@@ -20,30 +20,34 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"./public/search.xml"};
   </script>
 
-  <meta name="description" content="干巴得！！！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="派大标的菠萝屋">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="OpenCV中的GUI特性图像入门读取图像使用**cv.imread()**函数读取图像。第一个参数是图像的文件名（在当前目录）或是完整的路径（不在当前目录）。第二个参数是指定读取方式的标志  cv.IMREAD_COLOR：加载彩色图像，透明度被忽视，默认读取方式 cv.IMREAD_GRAYSCALE：加载灰度图像 cv.IMREAD_UNCHANGED：加载图像，包括alpha通道（透明和半">
+<meta property="og:type" content="article">
+<meta property="og:title" content="OpenCV笔记">
+<meta property="og:url" content="http://example.com/2022/07/09/OpenCV%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="派大标的菠萝屋">
-<meta property="og:description" content="干巴得！！！">
+<meta property="og:description" content="OpenCV中的GUI特性图像入门读取图像使用**cv.imread()**函数读取图像。第一个参数是图像的文件名（在当前目录）或是完整的路径（不在当前目录）。第二个参数是指定读取方式的标志  cv.IMREAD_COLOR：加载彩色图像，透明度被忽视，默认读取方式 cv.IMREAD_GRAYSCALE：加载灰度图像 cv.IMREAD_UNCHANGED：加载图像，包括alpha通道（透明和半">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-07-09T13:16:41.000Z">
+<meta property="article:modified_time" content="2022-07-12T03:27:15.645Z">
 <meta property="article:author" content="David">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="opencv">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2022/07/09/OpenCV%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>派大标的菠萝屋</title>
+  <title>OpenCV笔记 | 派大标的菠萝屋</title>
   
 
 
@@ -181,90 +185,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/30/%E3%80%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="David">
-      <meta itemprop="description" content="干巴得！！！">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="派大标的菠萝屋">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/03/30/%E3%80%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">《数据结构》学习笔记</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-03-30 10:28:41" itemprop="dateCreated datePublished" datetime="2022-03-30T10:28:41+08:00">2022-03-30</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-06-29 10:04:47" itemprop="dateModified" datetime="2022-06-29T10:04:47+08:00">2022-06-29</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
 
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>写在前面的话：<br>本文是《数据结构(c语言版)》的学习笔记</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/03/30/%E3%80%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -280,10 +204,9 @@
       <meta itemprop="name" content="派大标的菠萝屋">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/07/09/OpenCV%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">OpenCV笔记</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          OpenCV笔记
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -322,7 +245,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="OpenCV中的GUI特性"><a href="#OpenCV中的GUI特性" class="headerlink" title="OpenCV中的GUI特性"></a>OpenCV中的GUI特性</h1><h2 id="图像入门"><a href="#图像入门" class="headerlink" title="图像入门"></a>图像入门</h2><h3 id="读取图像"><a href="#读取图像" class="headerlink" title="读取图像"></a>读取图像</h3><p>使用**cv.imread()**函数读取图像。第一个参数是图像的文件名（在当前目录）或是完整的路径（不在当前目录）。第二个参数是指定读取方式的标志</p>
+        <h1 id="OpenCV中的GUI特性"><a href="#OpenCV中的GUI特性" class="headerlink" title="OpenCV中的GUI特性"></a>OpenCV中的GUI特性</h1><h2 id="图像入门"><a href="#图像入门" class="headerlink" title="图像入门"></a>图像入门</h2><h3 id="读取图像"><a href="#读取图像" class="headerlink" title="读取图像"></a>读取图像</h3><p>使用**cv.imread()**函数读取图像。第一个参数是图像的文件名（在当前目录）或是完整的路径（不在当前目录）。第二个参数是指定读取方式的标志</p>
 <ul>
 <li>cv.IMREAD_COLOR：加载彩色图像，透明度被忽视，默认读取方式</li>
 <li>cv.IMREAD_GRAYSCALE：加载灰度图像</li>
@@ -545,255 +468,51 @@
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">ret, thresh1 = cv2<span class="selector-class">.threshold</span>(img_gray, <span class="number">127</span>, <span class="number">255</span>, cv2.THRESH_BINARY)</span><br><span class="line">ret, thresh2 = cv2<span class="selector-class">.threshold</span>(img_gray, <span class="number">127</span>, <span class="number">255</span>, cv2.THRESH_BINARY_INV)</span><br><span class="line">ret, thresh3 = cv2<span class="selector-class">.threshold</span>(img_gray, <span class="number">127</span>, <span class="number">255</span>, cv2.THRESH_TRUNC)</span><br><span class="line">ret, thresh4 = cv2<span class="selector-class">.threshold</span>(img_gray, <span class="number">127</span>, <span class="number">255</span>, cv2.THRESH_TOZERO)</span><br><span class="line">ret, thresh5 = cv2<span class="selector-class">.threshold</span>(img_gray, <span class="number">127</span>, <span class="number">255</span>, cv2.THRESH_TOZERO_INV)</span><br><span class="line"></span><br><span class="line">titles = <span class="selector-attr">[<span class="string">&#x27;Original Image&#x27;</span>, <span class="string">&#x27;BINARY&#x27;</span>, <span class="string">&#x27;BINARY_INV&#x27;</span>, <span class="string">&#x27;TRUNC&#x27;</span>, <span class="string">&#x27;TOZERO&#x27;</span>, <span class="string">&#x27;TOZERO_INV&#x27;</span>]</span></span><br><span class="line">images = <span class="selector-attr">[img, thresh1, thresh2, thresh3, thresh4, thresh5]</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> <span class="selector-tag">i</span> <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">6</span>)</span><br><span class="line">    plt<span class="selector-class">.subplot</span>(<span class="number">2</span>, <span class="number">3</span>, i+<span class="number">1</span>), plt<span class="selector-class">.imshow</span>(images<span class="selector-attr">[i]</span>, <span class="string">&#x27;gray&#x27;</span>)</span><br><span class="line">    plt<span class="selector-class">.title</span>(titles<span class="selector-attr">[i]</span>)</span><br><span class="line">    plt<span class="selector-class">.xticks</span>(<span class="selector-attr">[]</span>), plt<span class="selector-class">.yticks</span>(<span class="selector-attr">[]</span>)</span><br><span class="line">plt<span class="selector-class">.show</span>()</span><br></pre></td></tr></table></figure>
 
 <h1 id="图像平滑"><a href="#图像平滑" class="headerlink" title="图像平滑"></a>图像平滑</h1><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
-      
     </div>
 
     
     
     
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/06/29/%E6%88%91%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="David">
-      <meta itemprop="description" content="干巴得！！！">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="派大标的菠萝屋">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/06/29/%E6%88%91%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">我的C语言学习笔记</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-06-29 10:02:00" itemprop="dateCreated datePublished" datetime="2022-06-29T10:02:00+08:00">2022-06-29</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-08 22:19:32" itemprop="dateModified" datetime="2022-07-08T22:19:32+08:00">2022-07-08</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>写在前面的话：<br>以下为作者在学习c语言时所遇到的问题</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/06/29/%E6%88%91%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
 
-    
-    
-    
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>David
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://example.com/2022/07/09/OpenCV%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="OpenCV笔记">http://example.com/2022/07/09/OpenCV学习笔记/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+          <div class="post-tags">
+              <a href="/tags/python/" rel="tag"># python</a>
+              <a href="/tags/opencv/" rel="tag"># opencv</a>
+          </div>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/30/%E6%88%91%E7%9A%84C++%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="David">
-      <meta itemprop="description" content="干巴得！！！">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="派大标的菠萝屋">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/03/30/%E6%88%91%E7%9A%84C++%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">我的C++学习笔记</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-03-30 10:28:41" itemprop="dateCreated datePublished" datetime="2022-03-30T10:28:41+08:00">2022-03-30</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-06-29 10:05:10" itemprop="dateModified" datetime="2022-06-29T10:05:10+08:00">2022-06-29</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>写在前面的话：<br>以下为作者阅读《c++primer（第五版）》所做的笔记</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/03/30/%E6%88%91%E7%9A%84C++%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
 
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/09/GitHub-Hexo-Next-%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%8F%8A%E7%BE%8E%E5%8C%96/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="David">
-      <meta itemprop="description" content="干巴得！！！">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="派大标的菠萝屋">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/03/09/GitHub-Hexo-Next-%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%8F%8A%E7%BE%8E%E5%8C%96/" class="post-title-link" itemprop="url">GitHub+Hexo(Next)博客搭建及美化</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-03-09 15:07:58" itemprop="dateCreated datePublished" datetime="2022-03-09T15:07:58+08:00">2022-03-09</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-06-29 10:05:19" itemprop="dateModified" datetime="2022-06-29T10:05:19+08:00">2022-06-29</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="搭建"><a href="#搭建" class="headerlink" title="搭建"></a>搭建</h1><p>参考b站教程：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1mU4y1j72n?p=1">2021最新保姆级Hexo+GitHub搭建个人博客</a></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/03/09/GitHub-Hexo-Next-%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%8F%8A%E7%BE%8E%E5%8C%96/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/06/29/%E6%88%91%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="prev" title="我的C语言学习笔记">
+      <i class="fa fa-chevron-left"></i> 我的C语言学习笔记
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
@@ -846,6 +565,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#OpenCV%E4%B8%AD%E7%9A%84GUI%E7%89%B9%E6%80%A7"><span class="nav-number">1.</span> <span class="nav-text">OpenCV中的GUI特性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E5%83%8F%E5%85%A5%E9%97%A8"><span class="nav-number">1.1.</span> <span class="nav-text">图像入门</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%BB%E5%8F%96%E5%9B%BE%E5%83%8F"><span class="nav-number">1.1.1.</span> <span class="nav-text">读取图像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%98%BE%E7%A4%BA%E5%9B%BE%E5%83%8F"><span class="nav-number">1.1.2.</span> <span class="nav-text">显示图像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%99%E5%85%A5%E5%87%BD%E6%95%B0"><span class="nav-number">1.1.3.</span> <span class="nav-text">写入函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">1.1.4.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8Matplotlib"><span class="nav-number">1.1.5.</span> <span class="nav-text">使用Matplotlib</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%86%E9%A2%91%E5%85%A5%E9%97%A8"><span class="nav-number">1.2.</span> <span class="nav-text">视频入门</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%8E%E7%9B%B8%E6%9C%BA%E4%B8%AD%E8%AF%BB%E5%8F%96%E8%A7%86%E9%A2%91"><span class="nav-number">1.2.1.</span> <span class="nav-text">从相机中读取视频</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%8E%E6%96%87%E4%BB%B6%E6%92%AD%E6%94%BE%E8%A7%86%E9%A2%91"><span class="nav-number">1.2.2.</span> <span class="nav-text">从文件播放视频</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%9D%E5%AD%98%E8%A7%86%E9%A2%91"><span class="nav-number">1.2.3.</span> <span class="nav-text">保存视频</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OpenCV%E4%B8%AD%E7%9A%84%E7%BB%98%E5%9B%BE%E5%8A%9F%E8%83%BD"><span class="nav-number">1.3.</span> <span class="nav-text">OpenCV中的绘图功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%BB%E7%BA%BF"><span class="nav-number">1.3.1.</span> <span class="nav-text">画线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%BB%E7%9F%A9%E5%BD%A2"><span class="nav-number">1.3.2.</span> <span class="nav-text">画矩形</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%BB%E5%9C%86%E5%9C%88"><span class="nav-number">1.3.3.</span> <span class="nav-text">画圆圈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%BB%E6%A4%AD%E5%9C%86"><span class="nav-number">1.3.4.</span> <span class="nav-text">画椭圆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%BB%E5%A4%9A%E8%BE%B9%E5%BD%A2"><span class="nav-number">1.3.5.</span> <span class="nav-text">画多边形</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%91%E5%9B%BE%E5%83%8F%E6%B7%BB%E5%8A%A0%E6%96%87%E6%9C%AC"><span class="nav-number">1.3.6.</span> <span class="nav-text">向图像添加文本</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%BC%A0%E6%A0%87%E4%BD%9C%E4%B8%BA%E7%94%BB%E7%AC%94"><span class="nav-number">1.4.</span> <span class="nav-text">鼠标作为画笔</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E6%BC%94%E7%A4%BA"><span class="nav-number">1.4.1.</span> <span class="nav-text">简单演示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B4%E9%AB%98%E7%BA%A7%E7%9A%84%E6%BC%94%E7%A4%BA"><span class="nav-number">1.4.2.</span> <span class="nav-text">更高级的演示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%98%E5%88%B6%E6%9C%AA%E5%A1%AB%E5%85%85%E7%9A%84%E7%9F%A9%E5%BD%A2"><span class="nav-number">1.4.3.</span> <span class="nav-text">绘制未填充的矩形</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%A8%E8%BF%B9%E6%A0%8F%E4%BD%9C%E4%B8%BA%E8%B0%83%E8%89%B2%E6%9D%BF"><span class="nav-number">1.5.</span> <span class="nav-text">轨迹栏作为调色板</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E6%93%8D%E4%BD%9C"><span class="nav-number">2.</span> <span class="nav-text">核心操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E5%83%8F%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="nav-number">2.1.</span> <span class="nav-text">图像的基本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BF%E9%97%AE%E5%92%8C%E4%BF%AE%E6%94%B9%E5%83%8F%E7%B4%A0%E5%80%BC"><span class="nav-number">2.1.1.</span> <span class="nav-text">访问和修改像素值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BF%E9%97%AE%E5%9B%BE%E5%83%8F%E5%B1%9E%E6%80%A7"><span class="nav-number">2.1.2.</span> <span class="nav-text">访问图像属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E5%83%8F%E6%84%9F%E5%85%B4%E8%B6%A3%E5%8C%BA%E5%9F%9FROI"><span class="nav-number">2.1.3.</span> <span class="nav-text">图像感兴趣区域ROI</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8B%86%E5%88%86%E5%92%8C%E5%90%88%E5%B9%B6%E5%9B%BE%E5%83%8F%E9%80%9A%E9%81%93"><span class="nav-number">2.1.4.</span> <span class="nav-text">拆分和合并图像通道</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BA%E5%9B%BE%E5%83%8F%E8%AE%BE%E7%BD%AE%E8%BE%B9%E6%A1%86%EF%BC%88%E5%A1%AB%E5%85%85%EF%BC%89"><span class="nav-number">2.1.5.</span> <span class="nav-text">为图像设置边框（填充）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E5%83%8F%E4%B8%8A%E7%9A%84%E7%AE%97%E6%B3%95%E8%BF%90%E7%AE%97"><span class="nav-number">2.2.</span> <span class="nav-text">图像上的算法运算</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E5%83%8F%E5%8A%A0%E6%B3%95"><span class="nav-number">2.2.1.</span> <span class="nav-text">图像加法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E5%83%8F%E8%9E%8D%E5%90%88"><span class="nav-number">2.2.2.</span> <span class="nav-text">图像融合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8C%89%E4%BD%8D%E8%BF%90%E7%AE%97"><span class="nav-number">2.2.3.</span> <span class="nav-text">按位运算</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%A7%E8%83%BD%E8%A1%A1%E9%87%8F%E5%92%8C%E6%8F%90%E5%8D%87%E6%8A%80%E6%9C%AF"><span class="nav-number">2.3.</span> <span class="nav-text">性能衡量和提升技术</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8OpenCV%E8%A1%A1%E9%87%8F%E6%80%A7%E8%83%BD"><span class="nav-number">2.3.1.</span> <span class="nav-text">使用OpenCV衡量性能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#OpenCV%E4%B8%AD%E7%9A%84%E9%BB%98%E8%AE%A4%E4%BC%98%E5%8C%96"><span class="nav-number">2.3.2.</span> <span class="nav-text">OpenCV中的默认优化</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%BE%E5%83%8F%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="nav-number">3.</span> <span class="nav-text">图像基本操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ROI%E5%8C%BA%E5%9F%9F"><span class="nav-number">4.</span> <span class="nav-text">ROI区域</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BE%B9%E7%95%8C%E5%A1%AB%E5%85%85"><span class="nav-number">5.</span> <span class="nav-text">边界填充</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97"><span class="nav-number">6.</span> <span class="nav-text">数值计算</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%BE%E5%83%8F%E8%9E%8D%E5%90%88-1"><span class="nav-number">7.</span> <span class="nav-text">图像融合</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%BE%E5%83%8F%E9%98%88%E5%80%BC"><span class="nav-number">8.</span> <span class="nav-text">图像阈值</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%BE%E5%83%8F%E5%B9%B3%E6%BB%91"><span class="nav-number">9.</span> <span class="nav-text">图像平滑</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
