@@ -244,9 +244,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>写在前面的话：<br>以下为作者阅读《c++primer（第五版）》所做的笔记</p>
-<span id="more"></span>
-
+        <p>写在前面的话：<br>以下为作者阅读《c++primer（第五版）》所做的笔记<br><span id="more"></span></p>
 <h1 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h1><h1 id="第Ⅰ部分"><a href="#第Ⅰ部分" class="headerlink" title="第Ⅰ部分"></a>第Ⅰ部分</h1><h2 id="第2章-变量和基本类型"><a href="#第2章-变量和基本类型" class="headerlink" title="第2章 变量和基本类型"></a>第2章 变量和基本类型</h2><h3 id="基本内置类型"><a href="#基本内置类型" class="headerlink" title="基本内置类型"></a>基本内置类型</h3><h4 id="算术类型"><a href="#算术类型" class="headerlink" title="算术类型"></a>算术类型</h4><p>——整型（包括字符和布尔类型在内）和浮点型</p>
 <ul>
 <li>带符号（signed）类型和无符号（unsigned）类型<ul>
@@ -275,7 +273,7 @@
 </ul>
 </li>
 <li>转义序列<ul>
-<li>不可打印的字符，如退格；特殊含义的字符，如引号<br>换行符             \n      横向制表符     \t        报警（响铃）符      \a<br>纵向制表符      \v      退格符            \b       双引号                      \“<br>反斜线              \      问号                  ?        单引号                      \‘<br>回车符             \r      进纸符              \f</li>
+<li>不可打印的字符，如退格；特殊含义的字符，如引号<br>换行符             \n      横向制表符     \t        报警（响铃）符      \a<br>纵向制表符      \v      退格符            \b       双引号                      \\”<br>反斜线              \\      问号                  \?        单引号                      \\’<br>回车符             \r      进纸符              \f </li>
 </ul>
 </li>
 <li>指定字面值的类型</li>
@@ -293,7 +291,7 @@
 </ul>
 </li>
 <li>列表初始化<ul>
-<li>用花括号来初始化变量，如 int num&#x3D;{0}</li>
+<li>用花括号来初始化变量，如 int num={0}</li>
 <li>如果我们使用列表初始化且初始值存在丢失信息的风险，则编译器将报错</li>
 </ul>
 </li>
@@ -354,22 +352,17 @@
 <figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int *p = <span class="meta">&amp;ival;</span></span><br></pre></td></tr></table></figure>
 <p>不能定义指向引用的指针，因为引用不是对象，没有实际地址<br><strong>指针的类型和其指向的对象的类型相匹配</strong></p>
 <figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">double</span> dval;</span><br><span class="line"><span class="built_in">double</span> *pd = &amp;dval;<span class="comment">//初始值是double型对象的地址</span></span><br><span class="line"><span class="built_in">double</span> *pd2 = pd;<span class="comment">//初始值是指向double对象的指针</span></span><br></pre></td></tr></table></figure></li>
-<li><p>指针值<br>指针的值（即地址）应属于下列4种状态之一：</p>
-<ul>
+<li>指针值<br>指针的值（即地址）应属于下列4种状态之一：<ul>
 <li>指向一个对象</li>
 <li>指向紧邻对象所占空间的下一个位置</li>
 <li>空指针，意味着指针没有指向任何对象</li>
 <li>无效指针，也就是上述情况以外的其他值</li>
 </ul>
 </li>
-<li><p>利用指针访问对象<br>使用解引用符（操作符*）来访问对象</p>
-<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int <span class="attr">ival</span> = <span class="number">42</span>;</span><br><span class="line">int *<span class="attr">p</span> = &amp;ival;</span><br><span class="line">*<span class="attr">p</span> = <span class="number">0</span>;//对指针p所指的对象赋值<span class="number">0</span>，即<span class="attr">ival=0</span></span><br></pre></td></tr></table></figure>
-<p>解引用操作仅适用于那些确实指向了某个对象的有效指针</p>
-</li>
-<li><p>空指针<br>不指向任何对象</p>
-<figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int *p1 <span class="operator">=</span> nullptr<span class="comment">;</span></span><br><span class="line">int *p2 <span class="operator">=</span> <span class="number">0</span><span class="comment">;</span></span><br><span class="line">int *p3 <span class="operator">=</span> NULL<span class="comment">;//需要首先#include cstdlib</span></span><br></pre></td></tr></table></figure></li>
-<li><p>赋值和指针<br>记住赋值永远改变的是等号左侧的对象</p>
-</li>
+<li>利用指针访问对象<br>使用解引用符（操作符*）来访问对象<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int <span class="attr">ival</span> = <span class="number">42</span>;</span><br><span class="line">int *<span class="attr">p</span> = &amp;ival;</span><br><span class="line">*<span class="attr">p</span> = <span class="number">0</span>;//对指针p所指的对象赋值<span class="number">0</span>，即<span class="attr">ival=0</span></span><br></pre></td></tr></table></figure>
+解引用操作仅适用于那些确实指向了某个对象的有效指针</li>
+<li>空指针<br>不指向任何对象<figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int *p1 <span class="operator">=</span> nullptr<span class="comment">;</span></span><br><span class="line">int *p2 <span class="operator">=</span> <span class="number">0</span><span class="comment">;</span></span><br><span class="line">int *p3 <span class="operator">=</span> NULL<span class="comment">;//需要首先#include cstdlib</span></span><br></pre></td></tr></table></figure></li>
+<li>赋值和指针<br>记住赋值永远改变的是等号左侧的对象</li>
 </ul>
 <h4 id="理解复合类型的声明"><a href="#理解复合类型的声明" class="headerlink" title="理解复合类型的声明"></a>理解复合类型的声明</h4><ul>
 <li>定义多个变量<br>类型修饰符（*或&amp;）属于声明符的一部分，也就是说，类型修饰符只作用于一个变量</li>
@@ -388,33 +381,25 @@
 <figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">double</span> dval = <span class="number">3.14</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="built_in">int</span> temp = dval;</span><br><span class="line"><span class="keyword">const</span> <span class="built_in">int</span> &amp;ri = temp;</span><br></pre></td></tr></table></figure>
 <p>ri绑定了一个临时量对象，即当编译器需要一个空间来暂存表达式的求值结果临时创建的一个未命名的对象</p>
 </li>
-<li><p>对const的引用可能引用一个并非const的对象<br><strong>常量引用</strong>仅对引用<strong>可参与的操作</strong>做出了限定，对于引用的<strong>对象本身是不是一个常量未作限定</strong><br>对象也可能是个非常量，所以<strong>允许通过其他途径改变他的值</strong></p>
-</li>
+<li>对const的引用可能引用一个并非const的对象<br><strong>常量引用</strong>仅对引用<strong>可参与的操作</strong>做出了限定，对于引用的<strong>对象本身是不是一个常量未作限定</strong><br>对象也可能是个非常量，所以<strong>允许通过其他途径改变他的值</strong></li>
 </ul>
-<h4 id="指针和const"><a href="#指针和const" class="headerlink" title="指针和const"></a>指针和const</h4><p>指向常量的指针，<strong>不能用于改变其所指对象的值</strong>，但没有规定那个对象的值不能<strong>通过其他途径</strong>改变</p>
-<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="built_in">double</span> pi = <span class="number">3.14</span>;<span class="comment">//pi是个常量，它的值不能改变</span></span><br><span class="line"><span class="built_in">double</span> *ptr = &amp;pi;<span class="comment">//错误，ptr是一个普通指针</span></span><br><span class="line"><span class="keyword">const</span> <span class="built_in">double</span> *cptr = &amp;pi;<span class="comment">//正确，cptr可以指向一个双精度常量</span></span><br><span class="line">*cptr = <span class="number">42</span>;<span class="comment">//错误，不能给*cptr赋值</span></span><br></pre></td></tr></table></figure>
-<p><strong>指针的类型必须与其所指对象的类型一致</strong>，但是有<strong>两个例外</strong>。第一种是允许令一个指向常量的指针指向一个非常量对象</p>
+<h4 id="指针和const"><a href="#指针和const" class="headerlink" title="指针和const"></a>指针和const</h4><p>指向常量的指针，<strong>不能用于改变其所指对象的值</strong>，但没有规定那个对象的值不能<strong>通过其他途径</strong>改变<br><figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="built_in">double</span> pi = <span class="number">3.14</span>;<span class="comment">//pi是个常量，它的值不能改变</span></span><br><span class="line"><span class="built_in">double</span> *ptr = &amp;pi;<span class="comment">//错误，ptr是一个普通指针</span></span><br><span class="line"><span class="keyword">const</span> <span class="built_in">double</span> *cptr = &amp;pi;<span class="comment">//正确，cptr可以指向一个双精度常量</span></span><br><span class="line">*cptr = <span class="number">42</span>;<span class="comment">//错误，不能给*cptr赋值</span></span><br></pre></td></tr></table></figure><br><strong>指针的类型必须与其所指对象的类型一致</strong>，但是有<strong>两个例外</strong>。第一种是允许令一个指向常量的指针指向一个非常量对象</p>
 <figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">double</span> dval = <span class="number">3.14</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="built_in">double</span> *cptr = &amp;dval;</span><br></pre></td></tr></table></figure>
 <p>所谓指向常量的指针或引用，不过是“自以为是”罢了，他们觉得自己指向了常量，所以<strong>自觉地不去改变所指对象的值</strong></p>
 <ul>
 <li><p>const指针<br><strong>常量指针必须初始化</strong>，而且一旦初始化完成，则它的<strong>值（也就是存放在指针中的那个地址）就不能再改变了</strong></p>
-<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> errNumb = <span class="number">0</span>;</span><br><span class="line"><span class="built_in">int</span> *<span class="keyword">const</span> curErr = &amp;errNumb;<span class="comment">//curErr将一直指向errNumb</span></span><br><span class="line"><span class="keyword">const</span> <span class="built_in">double</span> pi = <span class="number">3.14159</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="built_in">double</span> *<span class="keyword">const</span> pip = &amp;pi;<span class="comment">//pip是一个指向常量对象的常量指针</span></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> errNumb = <span class="number">0</span>;</span><br><span class="line"><span class="built_in">int</span> *<span class="keyword">const</span> curErr = &amp;errNumb;<span class="comment">//curErr将一直指向errNumb</span></span><br><span class="line"><span class="keyword">const</span> <span class="built_in">double</span> pi = <span class="number">3.14159</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="built_in">double</span> *<span class="keyword">const</span> pip = &amp;pi;<span class="comment">//pip是一个指向常量对象的常量指针</span></span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 <h4 id="顶层const"><a href="#顶层const" class="headerlink" title="顶层const"></a>顶层const</h4><p>顶层表示指针本身是个常量，底层表示指针所指的对象是一个常量<br>更一般的，<strong>顶层const</strong>可以表示<strong>任意的对象是常量</strong>，底层const则与指针和引用等复合类型的基本类型部分有关<br>比较特殊的是，<strong>指针类型既可以是顶层const也可以是底层</strong></p>
 <figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> i = <span class="number">0</span>;</span><br><span class="line"><span class="built_in">int</span> *<span class="keyword">const</span> pl = &amp;I;<span class="comment">//不能改变pl的值，顶层const</span></span><br><span class="line"><span class="keyword">const</span> <span class="built_in">int</span> ci = <span class="number">42</span>;<span class="comment">//不能改变ci的值，顶层const</span></span><br><span class="line"><span class="keyword">const</span> <span class="built_in">int</span> *p2 = &amp;ci;<span class="comment">//允许改变p2的值，底层const</span></span><br><span class="line"><span class="keyword">const</span> <span class="built_in">int</span> *<span class="keyword">const</span> p3 = p2;<span class="comment">//靠右的const是顶层const，靠左的是底层const</span></span><br><span class="line"><span class="keyword">const</span> <span class="built_in">int</span> &amp;r = ci;<span class="comment">//用于声明引用的const都是底层const</span></span><br></pre></td></tr></table></figure>
-<p>当执行对象的拷贝操作时，常量是顶层const还是底层const区别明显。其中，顶层const不受什么影响：</p>
-<figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">i</span> <span class="operator">=</span> ci<span class="comment">;//正确，拷贝ci的值，ci是一个顶层const，对此操作无影响</span></span><br><span class="line"><span class="attribute">p2</span> <span class="operator">=</span> p3<span class="comment">;//正确，p2和p3指向的对象类型相同，p3顶层const的部分不影响</span></span><br></pre></td></tr></table></figure>
-<p>另一方面，<strong>底层const的限制</strong>却不能忽视。当执行对象的拷贝操作时，<strong>拷入和拷出的对象必须具有相同的底层const资格</strong>，或者<strong>两个对象的数据类型必须能够转换</strong>。一般来说，<strong>非常量可以转换成常量</strong>，反之则不行</p>
-<figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">int *p = p3;//错误，p3包含底层const的定义，而p没有</span><br><span class="line">p2 = p3;//正确，p2和p3都是底层const</span><br><span class="line">p2 = &amp;i;//正确，int*能转换成const int*<span class="built_in"></span></span><br><span class="line"><span class="built_in">int </span>&amp;r = ci;//错误，普通的int&amp;不能绑定到int常量上<span class="built_in"></span></span><br><span class="line"><span class="built_in">const </span>int &amp;r2 = i;//正确，const int&amp;可以绑定到一个普通int上</span><br><span class="line">p3既是顶层const也是底层const，拷贝p3时可以不在乎它是一个顶层const，但是必须清楚它指向的对象得是一个常量。因此，不能用p3去初始化p，因为p指向的是一个普通的（非常量）整数。另一方面，p3的值可以赋给p2，是因为这两个指针都是底层const，尽管p3同时也是一个常量指针（顶层const）仅就这次赋值而言不会有什么影响</span><br></pre></td></tr></table></figure>
-
+<p>当执行对象的拷贝操作时，常量是顶层const还是底层const区别明显。其中，顶层const不受什么影响：<br><figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">i</span> <span class="operator">=</span> ci<span class="comment">;//正确，拷贝ci的值，ci是一个顶层const，对此操作无影响</span></span><br><span class="line"><span class="attribute">p2</span> <span class="operator">=</span> p3<span class="comment">;//正确，p2和p3指向的对象类型相同，p3顶层const的部分不影响</span></span><br></pre></td></tr></table></figure><br>另一方面，<strong>底层const的限制</strong>却不能忽视。当执行对象的拷贝操作时，<strong>拷入和拷出的对象必须具有相同的底层const资格</strong>，或者<strong>两个对象的数据类型必须能够转换</strong>。一般来说，<strong>非常量可以转换成常量</strong>，反之则不行<br><figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">int *p = p3;//错误，p3包含底层const的定义，而p没有</span><br><span class="line">p2 = p3;//正确，p2和p3都是底层const</span><br><span class="line">p2 = &amp;i;//正确，int*能转换成const int*<span class="built_in"></span></span><br><span class="line"><span class="built_in">int </span>&amp;r = ci;//错误，普通的int&amp;不能绑定到int常量上<span class="built_in"></span></span><br><span class="line"><span class="built_in">const </span>int &amp;r2 = i;//正确，const int&amp;可以绑定到一个普通int上</span><br><span class="line">p3既是顶层const也是底层const，拷贝p3时可以不在乎它是一个顶层const，但是必须清楚它指向的对象得是一个常量。因此，不能用p3去初始化p，因为p指向的是一个普通的（非常量）整数。另一方面，p3的值可以赋给p2，是因为这两个指针都是底层const，尽管p3同时也是一个常量指针（顶层const）仅就这次赋值而言不会有什么影响</span><br></pre></td></tr></table></figure></p>
 <h4 id="constexpr和常量表达式"><a href="#constexpr和常量表达式" class="headerlink" title="constexpr和常量表达式"></a>constexpr和常量表达式</h4><p><strong>常量表达式</strong>是指值不会改变并且在编译过程就能得到计算结果的表达式。一个对象（或表达式）是不是常量表达式由它的<strong>数据类型</strong>和<strong>初始值</strong>共同决定。例如</p>
 <figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="built_in">int</span> max_files = <span class="number">20</span>;         <span class="comment">//max_files是常量表达式</span></span><br><span class="line"><span class="keyword">const</span> <span class="built_in">int</span> limit = max_files + <span class="number">1</span>;  <span class="comment">//limit是常量表达式</span></span><br><span class="line"><span class="built_in">int</span> staff_size = <span class="number">27</span>;              <span class="comment">//staff_size不是常量表达式</span></span><br><span class="line"><span class="keyword">const</span> <span class="built_in">int</span> sz = get_size();        <span class="comment">//sz不是常量表达式</span></span><br><span class="line">尽管staff_size的初始值是个字面值常量，但由于他的数据类型只是一个普通<span class="built_in">int</span>而非<span class="keyword">const</span> <span class="built_in">int</span>，所以它不属于常量表达式。另一方面，尽管sz本身是一个常量，但它的具体值直到运行时才获取到，所以也不是常量表达式</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li><p>constexpr变量</p>
 <p>允许将变量声明为constexpr类型以便由编译器来验证变量的值是否是一个常量表达式。声明为constexpr的变量一定是一个常量，而且必须用常量表达式初始化</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">constexpr</span> <span class="type">int</span> mf = <span class="number">20</span>;         <span class="comment">//20是常量表达式</span></span><br><span class="line"><span class="keyword">constexpr</span> <span class="type">int</span> limit = mf + <span class="number">1</span>;  <span class="comment">//mf+1是常量表达式</span></span><br><span class="line"><span class="keyword">constexpr</span> <span class="type">int</span> sz = <span class="built_in">size</span>();     <span class="comment">//只有当size是一个constexpr函数时才是一条正确的声明语句</span></span><br></pre></td></tr></table></figure>
-
 <p>一般来说，如果认定变量是一个常数表达式，那就把它声明成constexpr类型</p>
 </li>
 <li><p>字面值类型</p>
@@ -426,18 +411,16 @@
 <li><p>指针和constexpr</p>
 <p>在constexpr声明中如果定义了一个指针，限定符constexpr仅对指针有效，与指针所指的对象无关：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> *p = <span class="literal">nullptr</span>;         <span class="comment">//p是一个指向整型常量的指针</span></span><br><span class="line"><span class="keyword">constexpr</span> <span class="type">int</span> *q = <span class="literal">nullptr</span>;     <span class="comment">//q是一个指向整数的常量指针</span></span><br><span class="line">p和q的类型相差甚远，p是一个指向常量的指针，而q是一个常量指针，其中的关键在于<span class="keyword">constexpr</span>把它所定义的对象置为了顶层<span class="type">const</span></span><br></pre></td></tr></table></figure>
-
 <p>与其他常量指针类似，constexpr指针既可以指向常量也可以指向一个非常量：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">constexpr</span> <span class="type">int</span> *np = <span class="literal">nullptr</span>;   <span class="comment">//np是一个指向整数的常量指针，其值为空</span></span><br><span class="line"><span class="type">int</span> j = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">constexpr</span> <span class="type">int</span> i = <span class="number">42</span>;          <span class="comment">//i的类型是整型常量</span></span><br><span class="line"><span class="comment">//i和j都必须定义在函数体之外</span></span><br><span class="line"><span class="keyword">constexpr</span> <span class="type">const</span> <span class="type">int</span> *p = &amp;i;   <span class="comment">//p是常量指针，指向整型常量i</span></span><br><span class="line"><span class="keyword">constexpr</span> <span class="type">int</span> *p1 = &amp;j;        <span class="comment">//p1是常量指针，指向整数j</span></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">constexpr</span> <span class="type">int</span> *np = <span class="literal">nullptr</span>;   <span class="comment">//np是一个指向整数的常量指针，其值为空</span></span><br><span class="line"><span class="type">int</span> j = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">constexpr</span> <span class="type">int</span> i = <span class="number">42</span>;          <span class="comment">//i的类型是整型常量</span></span><br><span class="line"><span class="comment">//i和j都必须定义在函数体之外</span></span><br><span class="line"><span class="keyword">constexpr</span> <span class="type">const</span> <span class="type">int</span> *p = &amp;i;   <span class="comment">//p是常量指针，指向整型常量i</span></span><br><span class="line"><span class="keyword">constexpr</span> <span class="type">int</span> *p1 = &amp;j;        <span class="comment">//p1是常量指针，指向整数j</span></span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 <h3 id="处理类型"><a href="#处理类型" class="headerlink" title="处理类型"></a>处理类型</h3><h4 id="类型别名"><a href="#类型别名" class="headerlink" title="类型别名"></a>类型别名</h4><p>类型别名是一个名字，他是某种类型的同义词。有两种方法可用于定义类型别名，</p>
 <p>传统的方法是使用关键字<strong>typedef</strong>：</p>
 <figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="built_in">double</span> wages;    <span class="comment">//wages是double的同义词</span></span><br><span class="line"><span class="keyword">typedef</span> wages base, *p;  <span class="comment">//base是double的同义词，p是double*的同义词</span></span><br></pre></td></tr></table></figure>
-
 <p>typedef作为声明语句中的基本数据类型的一部分出现，含有typedef的声明语句定义的不再是变量而是类型别名</p>
 <p>新标准规定了一种新的方法，使用<strong>别名声明</strong>来定义类型的别名：</p>
 <figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">using SI <span class="operator">=</span> Sales_item<span class="comment">;  //SI是Sales——item的同义词</span></span><br></pre></td></tr></table></figure>
-
 <h4 id="指针、常量和类型别名"><a href="#指针、常量和类型别名" class="headerlink" title="指针、常量和类型别名"></a>指针、常量和类型别名</h4><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
     </div>
 
@@ -657,6 +640,8 @@
 
 
 
+
+  
 
   
 
