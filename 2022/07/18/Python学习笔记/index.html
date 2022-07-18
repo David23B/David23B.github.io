@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/icons8-iron-man-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/icons8-iron-man-16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"./public/search.xml"};
+  </script>
+
+  <meta name="description" content="写在前面的话:这是我在学习《Python编程：从入门到实践》(第二版)的笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python笔记">
+<meta property="og:url" content="http://example.com/2022/07/18/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="派大标的菠萝屋">
+<meta property="og:description" content="写在前面的话:这是我在学习《Python编程：从入门到实践》(第二版)的笔记">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-07-18T07:54:41.000Z">
+<meta property="article:modified_time" content="2022-07-18T15:59:47.930Z">
+<meta property="article:author" content="David">
+<meta property="article:tag" content="python">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2022/07/18/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Python笔记 | 派大标的菠萝屋</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+    <a target="_blank" rel="noopener" href="https://github.com/David23B/David23B.github.io" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">派大标的菠萝屋</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">7</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">1</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">6</span></a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/07/18/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="David">
+      <meta itemprop="description" content="干巴得！！！">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="派大标的菠萝屋">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Python笔记
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-07-18 15:54:41 / 修改时间：23:59:47" itemprop="dateCreated datePublished" datetime="2022-07-18T15:54:41+08:00">2022-07-18</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>写在前面的话:<br>这是我在学习《Python编程：从入门到实践》(第二版)的笔记<br><span id="more"></span></p>
+<h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><h2 id="变量和简单数据类型"><a href="#变量和简单数据类型" class="headerlink" title="变量和简单数据类型"></a>变量和简单数据类型</h2><ol>
+<li><p>变量的命名</p>
+<ul>
+<li>只能包含字母、数字和下划线，变量名只能以字母或下划线打头</li>
+<li>变量名不能包含空格，但能使用下划线来分隔单词</li>
+<li>不要将Python关键字和函数名用作变量名</li>
+<li>变量名应既简短又具有描述性</li>
+<li>慎用小写字母l和大写字母O，容易看成1和0</li>
+</ul>
+</li>
+<li><p>字符串</p>
+<ul>
+<li>用引号括起来（外双里单，外单里双）</li>
+<li>使用方法，方法是python可对数据执行的操作。例如<code>name.title()</code>，<code>.</code> 表示让python对变量<code>name</code>执行方法<code>title()</code>。<code>()</code>内是方法完成工作所需的额外信息<ul>
+<li><code>.title（）</code>以首字母大写的方式显示每个单词</li>
+<li><code>.upper（）</code>全部大写</li>
+<li><code>.lower（）</code>全部小写</li>
+</ul>
+</li>
+<li>字符串中使用变量，在引号前加上字母f，再将变量用花括号括起来<ul>
+<li>f字符串，f是format（设置格式）的简写</li>
+<li>f字符串的格式：  <code>full_name = f&quot;&#123;first_name.title()&#125;&quot;</code></li>
+<li>format的格式：  <code>full_name = &quot;&#123;&#125;&#123;&#125;&quot;.format(first_name, last_name)</code></li>
+</ul>
+</li>
+<li>添加空白，空白泛指任何非打印字符<ul>
+<li><code>\t</code>   制表符（Tap）</li>
+<li><code>\n</code>  换行符（Enter）</li>
+</ul>
+</li>
+<li>（暂时）删除空白<ul>
+<li><code>.rstrip()</code> 末尾</li>
+<li><code>.lstrip()</code> 开头</li>
+<li><code>.strip()</code> 两头</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>数</p>
+<ul>
+<li><p>整数和浮点数</p>
+</li>
+<li><p>数中的下划线，易读，不打印</p>
+</li>
+<li><p>同时给多个变量赋值</p>
+</li>
+<li><ul>
+<li>x,y,z=1,2,3</li>
+</ul>
+</li>
+<li><p>常量，全部字母大写</p>
+</li>
+</ul>
+</li>
+<li><p>注释</p>
+<ul>
+<li>用 #</li>
+</ul>
+</li>
+</ol>
+<h2 id="列表简介"><a href="#列表简介" class="headerlink" title="列表简介"></a>列表简介</h2><ol>
+<li>列表是什么<ul>
+<li>用[]表示，例如<code>people=[&#39;mike&#39;,&#39;david&#39;,&#39;jane&#39;]</code></li>
+<li>打印列表，<code>print（people）</code></li>
+<li>访问列表，用索引，从0开始，例如<code>people[0]=mike</code></li>
+</ul>
+</li>
+<li>修改、添加和删除元素<ul>
+<li>修改</li>
+<li>添加<ul>
+<li><code>.append()</code>添加到末尾</li>
+<li><code>.insert()</code>添加到指定位置</li>
+</ul>
+</li>
+<li>删除<ul>
+<li><code>del</code>语句，例如<code>del people(1)</code>,删除david，删除相应位置元素</li>
+<li><code>.pop()</code>，弹出相应位置元素</li>
+<li><code>.remove()</code>，根据值删除，删除第一个指定的值</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>组织列表<ul>
+<li>永久排序<ul>
+<li><code>.sort()</code>，字母正序</li>
+<li><code>.sort(reverse=True)</code>，字母倒序</li>
+<li><code>.reverse()</code>，整个列表顺序倒过来</li>
+</ul>
+</li>
+<li>临时排序<ul>
+<li>函数<code>sorted()</code>，字母正序</li>
+<li>函数<code>sorted(reverse=True)</code>，字母倒序</li>
+</ul>
+</li>
+<li>确定列表长度，使用函数<code>len()</code></li>
+</ul>
+</li>
+</ol>
+<h2 id="操作列表"><a href="#操作列表" class="headerlink" title="操作列表"></a>操作列表</h2><ol>
+<li><p>遍历整个列表</p>
+<ul>
+<li>循环：例</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">magicians=[<span class="string">&#x27;alice&#x27;</span>,<span class="string">&#x27;david&#x27;</span>,<span class="string">&#x27;carolina&#x27;</span>]</span><br><span class="line"><span class="keyword">for</span> magician <span class="keyword">in</span> magicians:</span><br><span class="line">    <span class="built_in">print</span>(magician)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Thank you,everyone!&quot;</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>避免缩进错误<ul>
+<li>循环内容要缩进</li>
+<li>非循环内容不缩进</li>
+<li>冒号不要漏</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>创建数值列表</p>
+<ul>
+<li>使用函数<code>range()</code>。range(a,b,c)表示从a开始到b，包括a但不包括b，每隔c取一个数，如range(2,11,2)表示2，4，6，8，10。a默认为0，c默认为1。</li>
+<li>使用函数<code>list()</code>，创建列表。创建数字列表numbers=list(range(3))，得到列表numbers=[0,1,2]</li>
+<li>对数字列表执行简单的统计计算<ul>
+<li>函数<code>min()</code></li>
+<li><code>max()</code></li>
+<li><code>sum()</code></li>
+</ul>
+</li>
+<li>列表解析</li>
+</ul>
+</li>
+<li><p>使用列表的一部分</p>
+</li>
+<li><p>元组、不可变的列表</p>
+</li>
+<li><p>设置代码格式</p>
+</li>
+</ol>
+<h2 id="if语句"><a href="#if语句" class="headerlink" title="if语句"></a>if语句</h2><ol>
+<li>条件测试<ul>
+<li>等或不等，<code>==</code>或<code>!=</code></li>
+<li>检查多个条件，<code>and</code>和<code>or</code></li>
+<li>检查特定值是否包含在列表中，<code>in</code>和<code>not in</code></li>
+<li>布尔表达式</li>
+</ul>
+</li>
+<li>if语句<ul>
+<li><code>if</code></li>
+<li><code>if-else</code></li>
+<li><code>if-elif-else</code></li>
+<li>省略<code>else</code>代码块，用<code>elif</code>替代</li>
+<li>测试多个条件，多个if</li>
+</ul>
+</li>
+<li>处理列表<ul>
+<li>检查特殊元素</li>
+<li>确定列表不是空的，<code>if name[]</code>，如果列表为空，则返回false</li>
+<li>使用多个列表</li>
+</ul>
+</li>
+<li>设置if语句的格式，在比较运算符两侧各加一个空格</li>
+</ol>
+<h2 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h2><ol>
+<li>使用字典<ul>
+<li>用放在花括号{}中的一系列键值对表示。键值对是两个相关联的值，键与值用冒号分开，键值对间用逗号。如<code>alien=&#123;&#39;color&#39;:&#39;green&#39;,&#39;points&#39;:5&#125;</code></li>
+<li>访问字典中的值，例如<code>alien[&#39;color&#39;]</code></li>
+<li>添加键值对，<code>alien[&#39;x_position&#39;]=0</code></li>
+<li>定义一个空字典，<code>alien=&#123;&#125;</code></li>
+<li>修改字典中的值</li>
+<li>删除键值对，使用<code>del</code>语句，<code>del alien[&#39;color&#39;]</code></li>
+<li>使用方法<code>.get()</code>来访问值，如<code>alien.get(&#39;speed&#39;,&#39;No speed value assigned.&#39;)</code>没有speed的时候返回后面的值，没写则默认返回None</li>
+</ul>
+</li>
+<li>遍历字典<ul>
+<li>遍历所有键值对，<code>for k,v in user.items()</code>，方法<code>.items()</code>返回一个键值对列表</li>
+<li>遍历所有键，用方法<code>.keys()</code>，返回包含所有键的列表。或直接遍历字典，<code>for k in user</code></li>
+<li>按特定顺序遍历所有的键，<code>for k in sorted(users.keys())</code></li>
+<li>遍历所有的值，用方法<code>.values()</code><ul>
+<li>用集合set剔除重复的值，<code>for v in set(users.values())</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>嵌套<ul>
+<li>字典列表</li>
+<li>在字典中存储列表</li>
+<li>在字典中存储字典</li>
+</ul>
+</li>
+</ol>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>David
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://example.com/2022/07/18/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="Python笔记">http://example.com/2022/07/18/Python学习笔记/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/python/" rel="tag"># python</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/07/09/OpenCV%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="prev" title="OpenCV笔记">
+      <i class="fa fa-chevron-left"></i> OpenCV笔记
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="nav-number">1.</span> <span class="nav-text">基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E5%92%8C%E7%AE%80%E5%8D%95%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.1.</span> <span class="nav-text">变量和简单数据类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%97%E8%A1%A8%E7%AE%80%E4%BB%8B"><span class="nav-number">1.2.</span> <span class="nav-text">列表简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C%E5%88%97%E8%A1%A8"><span class="nav-number">1.3.</span> <span class="nav-text">操作列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#if%E8%AF%AD%E5%8F%A5"><span class="nav-number">1.4.</span> <span class="nav-text">if语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E5%85%B8"><span class="nav-number">1.5.</span> <span class="nav-text">字典</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">David</p>
+  <div class="site-description" itemprop="description">干巴得！！！</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">David</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+<script>
+var options = {
+  bottom: '64px',
+  right: 'unset',
+  left: '32px',
+  time: '0.5s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: '#100f2c',
+  buttonColorLight: '#fff',
+  saveInCookies: true,
+  label: '🌓',
+  autoMatchOsTheme: true
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+</script>
+
+</body>
+</html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/clicklove.js"></script>
