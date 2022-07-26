@@ -28,7 +28,7 @@
 <meta property="og:description" content="写在前面的话:这是我在学习《Python编程：从入门到实践》(第二版)的笔记">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-07-18T16:13:00.000Z">
-<meta property="article:modified_time" content="2022-07-19T06:42:15.825Z">
+<meta property="article:modified_time" content="2022-07-26T08:09:16.510Z">
 <meta property="article:author" content="David">
 <meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
@@ -213,10 +213,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-07-19 00:13:00 / 修改时间：14:42:15" itemprop="dateCreated datePublished" datetime="2022-07-19T00:13:00+08:00">2022-07-19</time>
+              <time title="创建时间：2022-07-19 00:13:00" itemprop="dateCreated datePublished" datetime="2022-07-19T00:13:00+08:00">2022-07-19</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-07-26 16:09:16" itemprop="dateModified" datetime="2022-07-26T16:09:16+08:00">2022-07-26</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -239,16 +245,14 @@
 
       
         <p>写在前面的话:<br>这是我在学习《Python编程：从入门到实践》(第二版)的笔记<br><span id="more"></span></p>
-<h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><h2 id="变量和简单数据类型"><a href="#变量和简单数据类型" class="headerlink" title="变量和简单数据类型"></a>变量和简单数据类型</h2><ol>
-<li>变量的命名<ul>
+<h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><h2 id="变量和简单数据类型"><a href="#变量和简单数据类型" class="headerlink" title="变量和简单数据类型"></a>变量和简单数据类型</h2><h3 id="变量的命名"><a href="#变量的命名" class="headerlink" title="变量的命名"></a>变量的命名</h3><ul>
 <li>只能包含字母、数字和下划线，变量名只能以字母或下划线打头</li>
 <li>变量名不能包含空格，但能使用下划线来分隔单词</li>
 <li>不要将Python关键字和函数名用作变量名</li>
 <li>变量名应既简短又具有描述性</li>
 <li>慎用小写字母l和大写字母O，容易看成1和0</li>
 </ul>
-</li>
-<li>字符串<ul>
+<h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><ul>
 <li>用引号括起来（外双里单，外单里双）</li>
 <li>使用方法，方法是python可对数据执行的操作。例如<code>name.title()</code>，<code>.</code>表示让python对变量<code>name</code>执行方法<code>title()</code>。<code>()</code>内是方法完成工作所需的额外信息<ul>
 <li><code>.title()</code>以首字母大写的方式显示每个单词</li>
@@ -274,8 +278,7 @@
 </ul>
 </li>
 </ul>
-</li>
-<li>数<ul>
+<h3 id="数"><a href="#数" class="headerlink" title="数"></a>数</h3><ul>
 <li>整数和浮点数</li>
 <li>数中的下划线，易读，不打印</li>
 <li>同时给多个变量赋值<ul>
@@ -284,20 +287,15 @@
 </li>
 <li>常量，全部字母大写</li>
 </ul>
-</li>
-<li>注释<ul>
+<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><ul>
 <li>用 <code>#</code></li>
 </ul>
-</li>
-</ol>
-<h2 id="列表简介"><a href="#列表简介" class="headerlink" title="列表简介"></a>列表简介</h2><ol>
-<li>列表是什么<ul>
+<h2 id="列表简介"><a href="#列表简介" class="headerlink" title="列表简介"></a>列表简介</h2><h3 id="列表是什么"><a href="#列表是什么" class="headerlink" title="列表是什么"></a>列表是什么</h3><ul>
 <li>用[]表示，例如<code>people=[&#39;mike&#39;,&#39;david&#39;,&#39;jane&#39;]</code></li>
 <li>打印列表，<code>print(people)</code></li>
 <li>访问列表，用索引，从0开始，例如<code>people[0]=mike</code></li>
 </ul>
-</li>
-<li>修改、添加和删除元素<ul>
+<h3 id="修改、添加和删除元素"><a href="#修改、添加和删除元素" class="headerlink" title="修改、添加和删除元素"></a>修改、添加和删除元素</h3><ul>
 <li>修改</li>
 <li>添加<ul>
 <li><code>.append()</code>添加到末尾</li>
@@ -311,8 +309,7 @@
 </ul>
 </li>
 </ul>
-</li>
-<li>组织列表<ul>
+<h3 id="组织列表"><a href="#组织列表" class="headerlink" title="组织列表"></a>组织列表</h3><ul>
 <li>永久排序<ul>
 <li><code>.sort()</code>，字母正序</li>
 <li><code>.sort(reverse=True)</code>，字母倒序</li>
@@ -326,10 +323,7 @@
 </li>
 <li>确定列表长度，使用函数<code>len()</code></li>
 </ul>
-</li>
-</ol>
-<h2 id="操作列表"><a href="#操作列表" class="headerlink" title="操作列表"></a>操作列表</h2><ol>
-<li>遍历整个列表<ul>
+<h2 id="操作列表"><a href="#操作列表" class="headerlink" title="操作列表"></a>操作列表</h2><h3 id="遍历整个列表"><a href="#遍历整个列表" class="headerlink" title="遍历整个列表"></a>遍历整个列表</h3><ul>
 <li>循环：例<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">magicians = [<span class="string">&#x27;alice&#x27;</span>, <span class="string">&#x27;david&#x27;</span>, <span class="string">&#x27;carolina&#x27;</span>]</span><br><span class="line"><span class="keyword">for</span> magician <span class="keyword">in</span> magicians:</span><br><span class="line">    <span class="built_in">print</span>(magician)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Thank you, everyone!&quot;</span>)</span><br></pre></td></tr></table></figure></li>
 <li>避免缩进错误<ul>
 <li>循环内容要缩进</li>
@@ -338,8 +332,7 @@
 </ul>
 </li>
 </ul>
-</li>
-<li>创建数值列表<ul>
+<h3 id="创建数值列表"><a href="#创建数值列表" class="headerlink" title="创建数值列表"></a>创建数值列表</h3><ul>
 <li>使用函数<code>range()</code>。<code>range(a,b,c)</code>表示从a开始到b，包括a但不包括b，每隔c取一个数，如range(2,11,2)表示2，4，6，8，10。a默认为0，c默认为1。</li>
 <li>使用函数<code>list()</code>，创建列表。创建数字列表<code>numbers=list(range(3))</code>，得到列表<code>numbers=[0,1,2]</code></li>
 <li>对数字列表执行简单的统计计算<ul>
@@ -349,48 +342,36 @@
 </ul>
 </li>
 </ul>
-</li>
-<li>使用列表的一部分<ul>
+<h3 id="使用列表的一部分"><a href="#使用列表的一部分" class="headerlink" title="使用列表的一部分"></a>使用列表的一部分</h3><ul>
 <li>切片，例如<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">players=[<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>,<span class="string">&#x27;d&#x27;</span>,<span class="string">&#x27;e&#x27;</span>]</span><br><span class="line">players[<span class="number">0</span>:<span class="number">3</span>]=[<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,c<span class="string">&#x27;]</span></span><br></pre></td></tr></table></figure>
 两边不填的话默认从头或尾开始</li>
 <li>遍历切片，在循环里限定切片</li>
 <li>复制列表，创建新列表，然后创建一个从头到尾的切片。一定不要写成两个列表相等，如<code>my_foods=friend_foods</code>，这样表示两个变量名指向同一个列表，即一个列表两个名。</li>
 </ul>
-</li>
-<li>元组、不可变的列表<ul>
+<h3 id="元组、不可变的列表"><a href="#元组、不可变的列表" class="headerlink" title="元组、不可变的列表"></a>元组、不可变的列表</h3><ul>
 <li>定义元组，<code>numbers=(0,1,2,3,4)</code>。元组用逗号标识，一个元素的元组<code>number=(1,)</code></li>
 <li>遍历</li>
 <li>修改元组变量。重新赋值</li>
 </ul>
-</li>
-<li>设置代码格式</li>
-</ol>
-<h2 id="if语句"><a href="#if语句" class="headerlink" title="if语句"></a>if语句</h2><ol>
-<li>条件测试<ul>
+<h3 id="设置代码格式"><a href="#设置代码格式" class="headerlink" title="设置代码格式"></a>设置代码格式</h3><h2 id="if语句"><a href="#if语句" class="headerlink" title="if语句"></a>if语句</h2><h3 id="条件测试"><a href="#条件测试" class="headerlink" title="条件测试"></a>条件测试</h3><ul>
 <li>等或不等，<code>==</code>或<code>!=</code></li>
 <li>检查多个条件，<code>and</code>和<code>or</code></li>
 <li>检查特定值是否包含在列表中，<code>in</code>和<code>not in</code></li>
 <li>布尔表达式</li>
 </ul>
-</li>
-<li>if语句<ul>
+<h3 id="if语句-1"><a href="#if语句-1" class="headerlink" title="if语句"></a>if语句</h3><ul>
 <li><code>if</code></li>
 <li><code>if-else</code></li>
 <li><code>if-elif-else</code></li>
 <li>省略<code>else</code>代码块，用<code>elif</code>替代</li>
 <li>测试多个条件，多个if</li>
 </ul>
-</li>
-<li>处理列表<ul>
+<h3 id="处理列表"><a href="#处理列表" class="headerlink" title="处理列表"></a>处理列表</h3><ul>
 <li>检查特殊元素</li>
 <li>确定列表不是空的，<code>if name[]</code>，如果列表为空，则返回<code>false</code></li>
 <li>使用多个列表</li>
 </ul>
-</li>
-<li>设置if语句的格式，在比较运算符两侧各加一个空格</li>
-</ol>
-<h2 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h2><ol>
-<li>使用字典<ul>
+<h3 id="设置if语句的格式，在比较运算符两侧各加一个空格"><a href="#设置if语句的格式，在比较运算符两侧各加一个空格" class="headerlink" title="设置if语句的格式，在比较运算符两侧各加一个空格"></a>设置if语句的格式，在比较运算符两侧各加一个空格</h3><h2 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h2><h3 id="使用字典"><a href="#使用字典" class="headerlink" title="使用字典"></a>使用字典</h3><ul>
 <li>用放在花括号{}中的一系列键值对表示。键值对是两个相关联的值，键与值用冒号分开，键值对间用逗号。如<code>alien=&#123;&#39;color&#39;:&#39;green&#39;,&#39;points&#39;:5&#125;</code></li>
 <li>访问字典中的值，例如<code>alien[&#39;color&#39;]</code></li>
 <li>添加键值对，<code>alien[&#39;x_position&#39;]=0</code></li>
@@ -399,8 +380,7 @@
 <li>删除键值对，使用del语句，<code>del alien[&#39;color&#39;]</code></li>
 <li>使用方法<code>.get()</code>来访问值，如<code>alien.get(&#39;speed&#39;,&#39;No speed value assigned.&#39;)</code>没有<code>speed</code>的时候返回后面的值，没写则默认返回<code>None</code></li>
 </ul>
-</li>
-<li>遍历字典<ul>
+<h3 id="遍历字典"><a href="#遍历字典" class="headerlink" title="遍历字典"></a>遍历字典</h3><ul>
 <li>遍历所有键值对，<code>for k,v in user.items()</code>，方法<code>.items()</code>返回一个键值对列表</li>
 <li>遍历所有键，用方法<code>.keys()</code>，返回包含所有键的列表。或直接遍历字典，<code>for k in user</code></li>
 <li>按特定顺序遍历所有的键，<code>for k in sorted(users.keys())</code></li>
@@ -409,15 +389,148 @@
 </ul>
 </li>
 </ul>
-</li>
-<li>嵌套<ul>
+<h3 id="嵌套"><a href="#嵌套" class="headerlink" title="嵌套"></a>嵌套</h3><ul>
 <li>字典列表</li>
 <li>在字典中存储列表</li>
 <li>在字典中存储字典</li>
 </ul>
+<h2 id="用户输入和while循环"><a href="#用户输入和while循环" class="headerlink" title="用户输入和while循环"></a>用户输入和while循环</h2><h3 id="函数input-的工作原理"><a href="#函数input-的工作原理" class="headerlink" title="函数input()的工作原理"></a>函数input()的工作原理</h3><p>函数input()让程序暂停运行，等待用户输入一些文本，按回车键结束输入。input()接受一个参数——要向用户显示的提示或说明。</p>
+<ul>
+<li><p>编写清晰的程序</p>
+<p>每当使用函数input()时，都应指定清晰易懂的提示。可以是一行，也可以是多行。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="built_in">input</span>(<span class="string">&quot;Please enter your name: &quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;\nHello,<span class="subst">&#123;name&#125;</span>!&quot;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">prompt = <span class="string">&quot;If you tell us who you are, we can personalize the messages you see.&quot;</span></span><br><span class="line">prompt += <span class="string">&quot;\nWhat is your first name? &quot;</span></span><br><span class="line"></span><br><span class="line">name = <span class="built_in">input</span>(prompt)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;\nHello,<span class="subst">&#123;name&#125;</span>!&quot;</span>)</span><br></pre></td></tr></table></figure>
 </li>
-</ol>
-<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+<li><p>使用int()来获取数值输入</p>
+<p>使用函数input()时，输入为字符串。可使用函数int()来使字符串转为数值</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">age = <span class="built_in">input</span>(<span class="string">&quot;How old are you? &quot;</span>)</span><br><span class="line">age = <span class="built_in">int</span>(age)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>求模运算符</p>
+<p> %</p>
+</li>
+</ul>
+<h3 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h3><ul>
+<li><p>使用while循环</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">current_number = <span class="number">1</span></span><br><span class="line"><span class="keyword">while</span> current_number &lt;= <span class="number">5</span>:</span><br><span class="line">    <span class="built_in">print</span>(current_number)</span><br><span class="line">    current_number += <span class="number">1</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>让用户选择何时退出</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">prompt = <span class="string">&quot;\nTell me something, and I will repeat it back to you:&quot;</span></span><br><span class="line">prompt += <span class="string">&quot;\nEnter &#x27;quit&#x27; to end the program. &quot;</span></span><br><span class="line">message = <span class="string">&quot;&quot;</span></span><br><span class="line"><span class="keyword">while</span> message != <span class="string">&#x27;quit&#x27;</span>:</span><br><span class="line">    message = <span class="built_in">input</span>(prompt)</span><br><span class="line">    <span class="built_in">print</span>(message)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用标志</p>
+<p> 定义一个变量，用于判断整个程序是否处于活动状态。</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">prompt = <span class="string">&quot;\nTell me something, and I will repeat it back to you:&quot;</span></span><br><span class="line">prompt += <span class="string">&quot;\nEnter &#x27;quit&#x27; to end the program. &quot;</span></span><br><span class="line"></span><br><span class="line">avtive = <span class="literal">True</span></span><br><span class="line"><span class="keyword">while</span> active:</span><br><span class="line">    message = <span class="built_in">input</span>(prompt)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> message == <span class="string">&#x27;quit&#x27;</span>:</span><br><span class="line">        active = <span class="literal">False</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(message)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用break退出循环</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">prompt = <span class="string">&quot;\nTell me something, and I will repeat it back to you:&quot;</span></span><br><span class="line">prompt += <span class="string">&quot;\nEnter &#x27;quit&#x27; to end the program. &quot;</span></span><br><span class="line"></span><br><span class="line">avtive = <span class="literal">True</span></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    message = <span class="built_in">input</span>(prompt)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> message == <span class="string">&#x27;quit&#x27;</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(message)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在循环中使用continue</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">current_number = <span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> current_number &lt; <span class="number">10</span>:</span><br><span class="line">    current_number += <span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span> current_number % <span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line">    <span class="built_in">print</span>(current_number)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>避免无限循环</p>
+</li>
+</ul>
+<h3 id="使用while循环处理列表和字典"><a href="#使用while循环处理列表和字典" class="headerlink" title="使用while循环处理列表和字典"></a>使用while循环处理列表和字典</h3><ul>
+<li><p>在列表之间移动元素</p>
+<p> 使用while循环，把一个列表中的元素提取到新列表中</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#首先创建一个待验证用户列表</span></span><br><span class="line"><span class="comment">#和一个存储已验证用户的空列表</span></span><br><span class="line">unconfirmed_users = [<span class="string">&#x27;alice&#x27;</span>,<span class="string">&#x27;brian&#x27;</span>,<span class="string">&#x27;candace&#x27;</span>]</span><br><span class="line">confirmed_users = []</span><br><span class="line"></span><br><span class="line"><span class="comment">#验证每个用户，直到没有未验证用户为止</span></span><br><span class="line"><span class="comment">#将每个经过验证的用户都移到已验证用户列表中</span></span><br><span class="line"><span class="keyword">while</span> unconfirmed_users:</span><br><span class="line">    current_user = unconfirmed_users.pop()</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;Verifying user: <span class="subst">&#123;current_user.title()&#125;</span>&quot;</span>)</span><br><span class="line">    confirmed_users.append(current_user)</span><br><span class="line">    </span><br><span class="line"><span class="comment">#显示所有已验证的用户</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;\nThe following users have been confirmed:&quot;</span>)</span><br><span class="line"><span class="keyword">for</span> confirmed_user <span class="keyword">in</span> confirmed_users:</span><br><span class="line">    <span class="built_in">print</span>(confirmed_user.title())</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删除为特定值的所有列表元素</p>
+<p> 删除列表中所有有重复的元素</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">pets = [<span class="string">&#x27;dog&#x27;</span>,<span class="string">&#x27;cat&#x27;</span>,<span class="string">&#x27;goldfish&#x27;</span>,<span class="string">&#x27;cat&#x27;</span>,<span class="string">&#x27;rabbit&#x27;</span>,<span class="string">&#x27;cat&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(pets)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="string">&#x27;cat&#x27;</span> <span class="keyword">in</span> pets:</span><br><span class="line">    pets.remove(<span class="string">&#x27;cat&#x27;</span>)</span><br><span class="line">    </span><br><span class="line"><span class="built_in">print</span>(pet)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用用户输入来填充字典</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">responses = &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">#设置一个标志，指出调查是否继续</span></span><br><span class="line">polling_active = <span class="literal">True</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> polling_active:</span><br><span class="line">    <span class="comment">#提示输入被调查者的名字和回答</span></span><br><span class="line">    name = <span class="built_in">input</span>(<span class="string">&quot;\nWhat&#x27;s your name? &quot;</span>)</span><br><span class="line">    response = <span class="built_in">input</span>(<span class="string">&quot;Which moutain would you like to climb someday? &quot;</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="comment">#将回答存储在字典里</span></span><br><span class="line">    responses[name]=response</span><br><span class="line">    </span><br><span class="line">    <span class="comment">#看看是否还有人要参与调查</span></span><br><span class="line">    repeat = <span class="built_in">input</span>(<span class="string">&quot;Would you like to let another person respond?(yes/no)&quot;</span>)</span><br><span class="line">    <span class="keyword">if</span> repeat == <span class="string">&#x27;no&#x27;</span>:</span><br><span class="line">        polling_active = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#调查结束，显示结果</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;\n--- Poll Results ---&quot;</span>)</span><br><span class="line"><span class="keyword">for</span> name, response <span class="keyword">in</span> responses.items():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;name&#125;</span> would like to climb <span class="subst">&#123;response&#125;</span>.&quot;</span>)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h3 id="定义函数"><a href="#定义函数" class="headerlink" title="定义函数"></a>定义函数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">greet_user</span>():            <span class="comment">#定义函数</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;显示简单的问候语。&quot;&quot;&quot;</span>    <span class="comment">#文档字符串的注释，描述函数是做什么的，用来生成有关程序中函数的文档</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Hello!&quot;</span>)           </span><br><span class="line">    </span><br><span class="line">greet_user()    <span class="comment">#调用函数</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>向函数传递信息</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">greet_user</span>(<span class="params">username</span>):    <span class="comment">#定义函数</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;显示简单的问候语。&quot;&quot;&quot;</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;Hello, <span class="subst">&#123;username.title()&#125;</span>!&quot;</span>)           </span><br><span class="line">    </span><br><span class="line">greet_user(<span class="string">&#x27;David&#x27;</span>)    <span class="comment">#调用函数</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><h3 id="实参和形参"><a href="#实参和形参" class="headerlink" title="实参和形参"></a>实参和形参</h3></li>
+</ul>
+<h3 id="传递实参"><a href="#传递实参" class="headerlink" title="传递实参"></a>传递实参</h3><ul>
+<li><p>位置实参</p>
+<p>实参的顺序与形参的顺序相同</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">describe_pet</span>(<span class="params">animal_type, pet_name</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;显示宠物的信息。&quot;&quot;&quot;</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;\nI have a <span class="subst">&#123;animal_type&#125;</span>.&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;My <span class="subst">&#123;animal_type&#125;</span>&#x27;s name is <span class="subst">&#123;pet_name.title()&#125;</span>.&quot;</span>)</span><br><span class="line">    </span><br><span class="line">describe_pet(<span class="string">&#x27;hamster&#x27;</span>, <span class="string">&#x27;harry&#x27;</span>)    <span class="comment">#位置实参，顺序与形参一致</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>关键字实参</p>
+<p>关键字实参是传递给函数的名称值对</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">describe_pet</span>(<span class="params">animal_type, pet_name</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;显示宠物的信息。&quot;&quot;&quot;</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;\nI have a <span class="subst">&#123;animal_type&#125;</span>.&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;My <span class="subst">&#123;animal_type&#125;</span>&#x27;s name is <span class="subst">&#123;pet_name.title()&#125;</span>.&quot;</span>)</span><br><span class="line">    </span><br><span class="line">describe_pet(animal_type=<span class="string">&#x27;hamster&#x27;</span>, pet_name=<span class="string">&#x27;harry&#x27;</span>)    <span class="comment">#关键字实参</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>默认值</p>
+<p>给每个形参指定默认值</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">describe_pet</span>(<span class="params">pet_name, animal_type=<span class="string">&#x27;dog&#x27;</span></span>):    <span class="comment">#animal_type的默认值为dog</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;显示宠物的信息。&quot;&quot;&quot;</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;\nI have a <span class="subst">&#123;animal_type&#125;</span>.&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;My <span class="subst">&#123;animal_type&#125;</span>&#x27;s name is <span class="subst">&#123;pet_name.title()&#125;</span>.&quot;</span>)</span><br><span class="line">    </span><br><span class="line">describe_pet(pet_name=<span class="string">&#x27;harry&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p><strong>注意，使用默认值时，必须先在形参列表中列出没有默认值的形参，再列出有默认值的实参</strong></p>
+</li>
+<li><p>等效的函数调用</p>
+</li>
+<li><p>避免实参错误</p>
+</li>
+</ul>
+<h3 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h3><ul>
+<li><p>返回简单值</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">get_formatted_name</span>(<span class="params">first_name, last_name</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;返回整洁的姓名&quot;&quot;&quot;</span></span><br><span class="line">    full_name = <span class="string">f&quot;<span class="subst">&#123;first_name&#125;</span> <span class="subst">&#123;last_name&#125;</span>&quot;</span></span><br><span class="line">    <span class="keyword">return</span> full_name.title()</span><br><span class="line"></span><br><span class="line">musician = get_formatted_name(<span class="string">&#x27;jimi&#x27;</span>, <span class="string">&#x27;hendrix&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(musician)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>让实参变成可选的</p>
+<p>指定一个空的默认值</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">get_formatted_name</span>(<span class="params">first_name, last_name, middle_name=<span class="string">&#x27;&#x27;</span></span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;返回整洁的姓名&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">if</span> middle_name:</span><br><span class="line">        full_name = <span class="string">f&quot;<span class="subst">&#123;first_name&#125;</span> <span class="subst">&#123;middle_name&#125;</span> <span class="subst">&#123;last_name&#125;</span>&quot;</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        full_name = <span class="string">f&quot;<span class="subst">&#123;first_name&#125;</span> <span class="subst">&#123;last_name&#125;</span>&quot;</span></span><br><span class="line">    <span class="keyword">return</span> full_name.title()</span><br><span class="line"></span><br><span class="line">musician = get_formatted_name(<span class="string">&#x27;jimi&#x27;</span>, <span class="string">&#x27;hendrix&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(musician)</span><br><span class="line"></span><br><span class="line">musician = get_formatted_name(<span class="string">&#x27;john&#x27;</span>, <span class="string">&#x27;hooker&#x27;</span>, <span class="string">&#x27;lee&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(musician)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>返回字典</p>
+<p>函数可以返回任何类型的值</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">build_person</span>(<span class="params">first_name, last_name, age=<span class="literal">None</span></span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;返回一个字典，其中包含有关一个人的信息。&quot;&quot;&quot;</span></span><br><span class="line">    person = &#123;<span class="string">&#x27;first&#x27;</span>:first_name, <span class="string">&#x27;last&#x27;</span>:last_name&#125;</span><br><span class="line">    <span class="keyword">if</span> age:</span><br><span class="line">        person[<span class="string">&#x27;age&#x27;</span>] = age</span><br><span class="line">    <span class="keyword">return</span> person</span><br><span class="line"></span><br><span class="line">musician = build_person(<span class="string">&#x27;jimi&#x27;</span>, <span class="string">&#x27;hendrix&#x27;</span>, age=<span class="number">27</span>)</span><br><span class="line"><span class="built_in">print</span>(musician)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>结合使用函数和while循环</p>
+</li>
+</ul>
+<h3 id="传递列表"><a href="#传递列表" class="headerlink" title="传递列表"></a>传递列表</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">greet_users</span>(<span class="params">names</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;向列表中的每位用户发出简单的问候。&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">for</span> name <span class="keyword">in</span> names:</span><br><span class="line">        msg = <span class="string">f&quot;Hello, <span class="subst">&#123;name.title()&#125;</span>!&quot;</span></span><br><span class="line">        <span class="built_in">print</span>(msg)</span><br><span class="line">        </span><br><span class="line">usernames = [<span class="string">&#x27;hannah&#x27;</span>, <span class="string">&#x27;ty&#x27;</span>, <span class="string">&#x27;margot&#x27;</span>]</span><br><span class="line">greet_users(usernames)</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>在函数中修改列表</p>
+<p>将列表传递给函数后，函数就可以对其进行修改。在函数中对这个列表所做的任何修改都是永久性的。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">print_models</span>(<span class="params">unprinted_designs, completed_models</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    模拟打印每个设计，直到没有未打印的设计为止，</span></span><br><span class="line"><span class="string">    打印每个设计后，都将其移到列表completed_models中。</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">while</span> unprinted_designs:</span><br><span class="line">        current_design = unprinted_designed.pop()</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;Printing model: <span class="subst">&#123;current_design&#125;</span>&quot;</span>)</span><br><span class="line">        completed_models.append(current_design)</span><br><span class="line">        </span><br><span class="line"><span class="keyword">def</span> <span class="title function_">show_completed_models</span>(<span class="params">completed_models</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;显示打印好的所有模型&quot;&quot;&quot;</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;\nThe following models have been printed:&quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> completed_model <span class="keyword">in</span> completed_models:</span><br><span class="line">        <span class="built_in">print</span>(completed_model)</span><br><span class="line"></span><br><span class="line">unprinted_designs = [<span class="string">&#x27;phone case&#x27;</span>, <span class="string">&#x27;robot pendant&#x27;</span>, <span class="string">&#x27;dodecahedron&#x27;</span>]</span><br><span class="line">completed_models = []</span><br><span class="line"></span><br><span class="line">print_models(unprinted_designs, completed_models)</span><br><span class="line">show_completed_models(completed_models)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>禁止函数修改列表</p>
+<p>可向函数传递列表的副本。除非有充分的理由，否则还是应该将原始列表传递给函数。因为让函数使用现成的列表可以避免花时间和内存创建副本，从而提高效率。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">function_name(list_name[:])</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="传递任意数量的实参"><a href="#传递任意数量的实参" class="headerlink" title="传递任意数量的实参"></a>传递任意数量的实参</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">make_pizza</span>(<span class="params">*toppings</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;概述要制作的比萨。&quot;&quot;&quot;</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;\nMaking a pizza with the following toppings:&quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> topping <span class="keyword">in</span> toppings:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;- <span class="subst">&#123;topping&#125;</span>&quot;</span>)</span><br><span class="line">        </span><br><span class="line">make_pizza(<span class="string">&#x27;pepperoni&#x27;</span>)</span><br><span class="line">make_pizza(<span class="string">&#x27;mushrooms&#x27;</span>, <span class="string">&#x27;green peppers&#x27;</span>, <span class="string">&#x27;extra cheese&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>形参名<strong>*toppings</strong>中的星号让Python创建一个名为toppings的空元组，并将收到的所有值都封装到这个元组中。</p>
+<ul>
+<li><p>结合使用位置实参和任意数量实参</p>
+<p>如果要让函数接受不同类型的实参，必须在函数定义中将接纳任意数量实参的形参放在最后</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">make_pizza</span>(<span class="params">size, *toppings</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;概述要制作的比萨。&quot;&quot;&quot;</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;\nMaking a <span class="subst">&#123;size&#125;</span>-inch pizza with the following toppings:&quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> topping <span class="keyword">in</span> toppings:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;- <span class="subst">&#123;topping&#125;</span>&quot;</span>)</span><br><span class="line">        </span><br><span class="line">make_pizza(<span class="number">16</span>, <span class="string">&#x27;pepperoni&#x27;</span>)</span><br><span class="line">make_pizza(<span class="number">12</span>, <span class="string">&#x27;mushromms&#x27;</span>, <span class="string">&#x27;green peppers&#x27;</span>, <span class="string">&#x27;extra cheese&#x27;</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用任意数量的关键字实参</p>
+<p>有时候，需要接受任意数量的实参，但预先不知道传递给函数的会是什么样的信息。这种情况，可将函数编写成能够接受任意数量的键值对——调用语句提供了多少就接受多少</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">build_profile</span>(<span class="params">first, last, **user_info</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;创建一个字典，其中包含我们知道的有关用户的一切。&quot;&quot;&quot;</span></span><br><span class="line">    user_info[<span class="string">&#x27;first_name&#x27;</span>] = first</span><br><span class="line">    user_info[<span class="string">&#x27;last_name&#x27;</span>] = last</span><br><span class="line">    <span class="keyword">return</span> user_info</span><br><span class="line"></span><br><span class="line">user_profile = build_profile(<span class="string">&#x27;albert&#x27;</span>, <span class="string">&#x27;einstein&#x27;</span>,</span><br><span class="line">                             location=<span class="string">&#x27;princeton&#x27;</span>,</span><br><span class="line">                             field=<span class="string">&#x27;physics&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(user_profile)</span><br></pre></td></tr></table></figure>
+<p>形参<strong>\</strong>user_info**中的两个星号让Python创建一个名为user_info的空字典，并将收到的所有名称值对都放到这个字典中</p>
+</li>
+</ul>
+<h3 id="将函数存储在模块中"><a href="#将函数存储在模块中" class="headerlink" title="将函数存储在模块中"></a>将函数存储在模块中</h3><p>将函数存储在称为<strong>模块</strong>的独立文件中，再将模块导入到主程序中。import语句允许在当前运行的程序文件中使用模块中的代码</p>
+<ul>
+<li><p>导入整个模块</p>
+<p>要让函数是可导入的，得先创建模块。模块是扩展名为.py的文件，包含要导入到程序中的代码</p>
+<p>下面来创建一个包含函数make_pizza()的模块pizza.py，并在making_pizzas.py中调用该函数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">make_pizza</span>(<span class="params">size, *toppings</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;概述要制作的比萨。&quot;&quot;&quot;</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;\nMaking a <span class="subst">&#123;size&#125;</span>-inch pizza with the following toppings:&quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> topping <span class="keyword">in</span> toppings:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;- <span class="subst">&#123;topping&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pizza</span><br><span class="line"></span><br><span class="line">pizza.make_pizza(<span class="number">16</span>, <span class="string">&#x27;pepperoni&#x27;</span>)</span><br><span class="line">pizza.make_pizza(<span class="number">12</span>, <span class="string">&#x27;mushrooms&#x27;</span>, <span class="string">&#x27;green peppers&#x27;</span>, <span class="string">&#x27;extra cheese&#x27;</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>导入特定的函数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> module_name <span class="keyword">import</span> function_name    <span class="comment">#从module_name文件中导入函数function_name</span></span><br><span class="line"><span class="keyword">from</span> module_name <span class="keyword">import</span> function_0, function_1, function_2    <span class="comment">#导入多个函数</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用as给函数指定别名</p>
+<p>如果要导入函数的名称可能与程序中现有的名称冲突，或者函数的名称太长，可指定简短而独一无二的别名。要给函数取这种特殊的外号，需要在导入它时指定</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pizza <span class="keyword">import</span> make_pizza <span class="keyword">as</span> mp</span><br><span class="line"></span><br><span class="line">mp(<span class="number">16</span>, <span class="string">&#x27;pepperoni&#x27;</span>)</span><br><span class="line">mp(<span class="number">12</span>, <span class="string">&#x27;mushrooms&#x27;</span>, <span class="string">&#x27;green peppers&#x27;</span>, <span class="string">&#x27;extra cheese&#x27;</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用as给模块指定别名</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pizza <span class="keyword">as</span> pa</span><br><span class="line"></span><br><span class="line">p.make_pizza(<span class="number">16</span>, <span class="string">&#x27;pepperoni&#x27;</span>)</span><br><span class="line">p.make_pizza(<span class="number">12</span>, <span class="string">&#x27;mushrooms&#x27;</span>, <span class="string">&#x27;green peppers&#x27;</span>, <span class="string">&#x27;extra cheese&#x27;</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>导入模块中的所有函数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pizza <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">make_pizza(<span class="number">16</span>, <span class="string">&#x27;pepperoni&#x27;</span>)</span><br><span class="line">make_pizza(<span class="number">12</span>, <span class="string">&#x27;mushrooms&#x27;</span>, <span class="string">&#x27;green peppers&#x27;</span>, <span class="string">&#x27;extra cheese&#x27;</span>)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="类"><a href="#类" class="headerlink" title="类"></a>类</h2><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
     </div>
 
     
@@ -517,7 +630,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="nav-number">1.</span> <span class="nav-text">基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E5%92%8C%E7%AE%80%E5%8D%95%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.1.</span> <span class="nav-text">变量和简单数据类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%97%E8%A1%A8%E7%AE%80%E4%BB%8B"><span class="nav-number">1.2.</span> <span class="nav-text">列表简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C%E5%88%97%E8%A1%A8"><span class="nav-number">1.3.</span> <span class="nav-text">操作列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#if%E8%AF%AD%E5%8F%A5"><span class="nav-number">1.4.</span> <span class="nav-text">if语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E5%85%B8"><span class="nav-number">1.5.</span> <span class="nav-text">字典</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="nav-number">1.</span> <span class="nav-text">基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E5%92%8C%E7%AE%80%E5%8D%95%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.1.</span> <span class="nav-text">变量和简单数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E7%9A%84%E5%91%BD%E5%90%8D"><span class="nav-number">1.1.1.</span> <span class="nav-text">变量的命名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">1.1.2.</span> <span class="nav-text">字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0"><span class="nav-number">1.1.3.</span> <span class="nav-text">数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E9%87%8A"><span class="nav-number">1.1.4.</span> <span class="nav-text">注释</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%97%E8%A1%A8%E7%AE%80%E4%BB%8B"><span class="nav-number">1.2.</span> <span class="nav-text">列表简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%97%E8%A1%A8%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">1.2.1.</span> <span class="nav-text">列表是什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E3%80%81%E6%B7%BB%E5%8A%A0%E5%92%8C%E5%88%A0%E9%99%A4%E5%85%83%E7%B4%A0"><span class="nav-number">1.2.2.</span> <span class="nav-text">修改、添加和删除元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%84%E7%BB%87%E5%88%97%E8%A1%A8"><span class="nav-number">1.2.3.</span> <span class="nav-text">组织列表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C%E5%88%97%E8%A1%A8"><span class="nav-number">1.3.</span> <span class="nav-text">操作列表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%81%8D%E5%8E%86%E6%95%B4%E4%B8%AA%E5%88%97%E8%A1%A8"><span class="nav-number">1.3.1.</span> <span class="nav-text">遍历整个列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%95%B0%E5%80%BC%E5%88%97%E8%A1%A8"><span class="nav-number">1.3.2.</span> <span class="nav-text">创建数值列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E5%88%97%E8%A1%A8%E7%9A%84%E4%B8%80%E9%83%A8%E5%88%86"><span class="nav-number">1.3.3.</span> <span class="nav-text">使用列表的一部分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%83%E7%BB%84%E3%80%81%E4%B8%8D%E5%8F%AF%E5%8F%98%E7%9A%84%E5%88%97%E8%A1%A8"><span class="nav-number">1.3.4.</span> <span class="nav-text">元组、不可变的列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%A0%81%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.3.5.</span> <span class="nav-text">设置代码格式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#if%E8%AF%AD%E5%8F%A5"><span class="nav-number">1.4.</span> <span class="nav-text">if语句</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%A1%E4%BB%B6%E6%B5%8B%E8%AF%95"><span class="nav-number">1.4.1.</span> <span class="nav-text">条件测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#if%E8%AF%AD%E5%8F%A5-1"><span class="nav-number">1.4.2.</span> <span class="nav-text">if语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%84%E7%90%86%E5%88%97%E8%A1%A8"><span class="nav-number">1.4.3.</span> <span class="nav-text">处理列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AEif%E8%AF%AD%E5%8F%A5%E7%9A%84%E6%A0%BC%E5%BC%8F%EF%BC%8C%E5%9C%A8%E6%AF%94%E8%BE%83%E8%BF%90%E7%AE%97%E7%AC%A6%E4%B8%A4%E4%BE%A7%E5%90%84%E5%8A%A0%E4%B8%80%E4%B8%AA%E7%A9%BA%E6%A0%BC"><span class="nav-number">1.4.4.</span> <span class="nav-text">设置if语句的格式，在比较运算符两侧各加一个空格</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E5%85%B8"><span class="nav-number">1.5.</span> <span class="nav-text">字典</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E5%AD%97%E5%85%B8"><span class="nav-number">1.5.1.</span> <span class="nav-text">使用字典</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%81%8D%E5%8E%86%E5%AD%97%E5%85%B8"><span class="nav-number">1.5.2.</span> <span class="nav-text">遍历字典</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B5%8C%E5%A5%97"><span class="nav-number">1.5.3.</span> <span class="nav-text">嵌套</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%A8%E6%88%B7%E8%BE%93%E5%85%A5%E5%92%8Cwhile%E5%BE%AA%E7%8E%AF"><span class="nav-number">1.6.</span> <span class="nav-text">用户输入和while循环</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0input-%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="nav-number">1.6.1.</span> <span class="nav-text">函数input()的工作原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#while%E5%BE%AA%E7%8E%AF"><span class="nav-number">1.6.2.</span> <span class="nav-text">while循环</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8while%E5%BE%AA%E7%8E%AF%E5%A4%84%E7%90%86%E5%88%97%E8%A1%A8%E5%92%8C%E5%AD%97%E5%85%B8"><span class="nav-number">1.6.3.</span> <span class="nav-text">使用while循环处理列表和字典</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0"><span class="nav-number">1.7.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0"><span class="nav-number">1.7.1.</span> <span class="nav-text">定义函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E5%8F%82%E5%92%8C%E5%BD%A2%E5%8F%82"><span class="nav-number">1.7.2.</span> <span class="nav-text">实参和形参</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%A0%E9%80%92%E5%AE%9E%E5%8F%82"><span class="nav-number">1.7.3.</span> <span class="nav-text">传递实参</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="nav-number">1.7.4.</span> <span class="nav-text">返回值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%A0%E9%80%92%E5%88%97%E8%A1%A8"><span class="nav-number">1.7.5.</span> <span class="nav-text">传递列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%A0%E9%80%92%E4%BB%BB%E6%84%8F%E6%95%B0%E9%87%8F%E7%9A%84%E5%AE%9E%E5%8F%82"><span class="nav-number">1.7.6.</span> <span class="nav-text">传递任意数量的实参</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%86%E5%87%BD%E6%95%B0%E5%AD%98%E5%82%A8%E5%9C%A8%E6%A8%A1%E5%9D%97%E4%B8%AD"><span class="nav-number">1.7.7.</span> <span class="nav-text">将函数存储在模块中</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB"><span class="nav-number">1.8.</span> <span class="nav-text">类</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
